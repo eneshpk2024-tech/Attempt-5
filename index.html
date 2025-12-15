@@ -1,0 +1,81 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>For Dhikshika ❤️</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:'Segoe UI',Roboto,sans-serif;
+  background:linear-gradient(135deg,#ff758c,#ff7eb3);
+  color:#fff;
+  overflow:hidden; /* IMPORTANT: prevents seeing next pages */
+}/* All screens are stacked / .screen{ position:fixed; / KEY FIX */ inset:0; max-width:420px; margin:auto; padding:24px; display:flex; flex-direction:column; justify-content:center; text-align:center; background:linear-gradient(135deg,#ff758c,#ff7eb3); }
+
+.hidden{display:none}
+
+h1{font-size:2rem} p{font-size:1.15rem;line-height:1.7}
+
+button{ border:none; border-radius:999px; padding:14px 28px; font-size:1.05rem; margin:10px; cursor:pointer; } .yes{background:#fff;color:#ff4f7b} .no{background:rgba(255,255,255,0.3);color:#fff}
+
+.heart{font-size:3rem;animation:beat 1.2s infinite} @keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
+
+/* Scroll screen / .long{ overflow-y:auto; / only this page scrolls */ } .long-content{ min-height:160vh; display:flex; flex-direction:column; justify-content:space-between; }
+
+/* Black screen */ .black{ background:#000; } .ribbon{ position:absolute; top:20px; right:20px; font-size:3rem; transform:rotate(-25deg); } .fade{opacity:0;transition:opacity 2s} .show{opacity:1} </style>
+
+</head>
+<body><!-- Screen 1 --><div id="s1" class="screen">
+  <div class="heart">💖</div>
+  <h1>Are u Dhikshu? 😌</h1>
+  <button class="yes" onclick="goYes()">Yes</button>
+  <button class="no" onclick="goNo()">No</button>
+  <p id="tease" class="hidden">Stop kidding 😏<br>I knew that it's 🫵🏻 Dhikshu</p>
+</div><!-- Screen 2 --><div id="s2" class="screen hidden">
+  <p>I want to tell you a secret to <strong>Madam</strong> 🤫🤭</p>
+  <p>Finally your 🌕 found his 🌍<br>revolve around 🫣🫣</p>
+  <div class="heart">❤️</div>
+  <button class="yes" onclick="toThird()">Next 💕</button>
+</div><!-- Screen 3 --><div id="s3" class="screen hidden long">
+  <div class="long-content">
+    <div>
+      <h1>Do you want to see her? 😳</h1>
+      <p>👇 Scroll down slowly 👇</p>
+    </div>
+    <div>
+      <p>Before seeing my Angel 😇🪽</p>
+      <p>You should accept the terms & conditions…</p>
+      <p>• To not get jealous of her beauty 😌</p>
+      <p>• Because she is so damn beautiful 😍</p>
+      <p>Ok va? 😏</p>
+      <button class="yes" onclick="accept()">Mm ok</button>
+      <button class="no" onclick="reject()">Cha venna</button>
+      <p id="scrollText" class="hidden">Aprm yen madam Evalo neram scroll panniga 😏</p>
+    </div>
+  </div>
+</div><!-- Screen 4 --><div id="s4" class="screen hidden black">
+  <div class="ribbon">🎀</div>
+  <h1 id="angelText" class="fade">How does my Angel look like? 😇</h1>
+</div><script>
+function goYes(){
+  s1.classList.add('hidden');
+  s2.classList.remove('hidden');
+}
+function goNo(){
+  tease.classList.remove('hidden');
+}
+function toThird(){
+  s2.classList.add('hidden');
+  s3.classList.remove('hidden');
+}
+function accept(){
+  s3.classList.add('hidden');
+  s4.classList.remove('hidden');
+  setTimeout(()=>angelText.classList.add('show'),60000);
+}
+function reject(){
+  scrollText.classList.remove('hidden');
+}
+</script></body>
+</html>
